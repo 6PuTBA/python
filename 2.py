@@ -1,11 +1,12 @@
-"""Для списка реализовать обмен значений соседних элементов, т.е.
-Значениями обмениваются элементы с индексами 0 и 1, 2 и 3 и т.д.
-При нечетном количестве элементов последний сохранить на своем месте.
-Для заполнения списка элементов необходимо использовать функцию input()."""
+"""Реализовать функцию, принимающую несколько параметров, описывающих данные
+пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
+Функция должна принимать параметры как именованные аргументы. Реализовать
+вывод данных о пользователе одной строкой."""
 
-input_str = input()
-my_list = input_str.split()
-print(my_list)
-for i in range(1, len(my_list), 2):
-    my_list[i], my_list[i-1] = my_list[i-1], my_list[i]
-print(my_list)
+
+def users(name, surname, birthday, city, email, phone_num):
+    return f"{name} {surname} {birthday} {city} {email} {phone_num}"
+
+
+print(users(name="Andrey", surname="Sinitsyn", birthday="18 october", city="Moscow",
+      email="andrey-sin@ya.ru", phone_num="8(999)999-99-99"))
